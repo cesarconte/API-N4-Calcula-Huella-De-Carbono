@@ -28,8 +28,6 @@ async function fetchData() {
       const responseVehicle = await fetch("https://beta4.api.climatiq.io/batch", requestOptionsVehicle);
       const resultVehicle = await responseVehicle.json();
   
-      console.log(resultVehicle);
-  
       const requestDataFlight = {
         legs: [
           {
@@ -51,8 +49,6 @@ async function fetchData() {
       const responseFlight = await fetch("https://beta4.api.climatiq.io/travel/flights", requestOptionsFlight);
       const resultFlight = await responseFlight.json();
   
-      console.log(resultFlight);
-  
       const requestDataTrain = {
         emission_factor: {
           id: "6075062f-6c1d-465c-b5bd-bc804b3f0fd1"
@@ -73,8 +69,6 @@ async function fetchData() {
   
       const responseTrain = await fetch("https://beta4.api.climatiq.io/estimate", requestOptionsTrain);
       const resultTrain = await responseTrain.json();
-  
-      console.log(resultTrain);
   
       const dataTable = document.getElementById("data-table");
 
