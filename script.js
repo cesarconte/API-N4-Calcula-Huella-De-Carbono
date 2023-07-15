@@ -4,7 +4,6 @@ async function fetchData() {
       myHeaders.append("Authorization", "Bearer GZ83GV9QD349QHMRXTJBAYA4DQMQ");
       myHeaders.append("Content-Type", "application/json");
   
-      // Vehicle data
       const requestDataVehicle = [
         {
           emission_factor: {
@@ -31,7 +30,6 @@ async function fetchData() {
   
       console.log(resultVehicle);
   
-      // Flight data
       const requestDataFlight = {
         legs: [
           {
@@ -55,7 +53,6 @@ async function fetchData() {
   
       console.log(resultFlight);
   
-      // Train data
       const requestDataTrain = {
         emission_factor: {
           id: "6075062f-6c1d-465c-b5bd-bc804b3f0fd1"
@@ -80,8 +77,7 @@ async function fetchData() {
       console.log(resultTrain);
   
       const dataTable = document.getElementById("data-table");
-  
-      // Vehicle data
+
       const rowVehicle = document.createElement("tr");
       const activityCellVehicle = document.createElement("td");
       const distanceCellVehicle = document.createElement("td");
@@ -96,8 +92,7 @@ async function fetchData() {
       rowVehicle.appendChild(emissionsCellVehicle);
   
       dataTable.appendChild(rowVehicle);
-  
-      // Flight data
+
       const rowFlight = document.createElement("tr");
       const legCellFlight = document.createElement("td");
       const distanceCellFlight = document.createElement("td");
@@ -113,7 +108,6 @@ async function fetchData() {
   
       dataTable.appendChild(rowFlight);
   
-      // Train data
       const rowTrain = document.createElement("tr");
       const activityCellTrain = document.createElement("td");
       const distanceCellTrain = document.createElement("td");
